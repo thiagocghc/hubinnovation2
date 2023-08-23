@@ -1,0 +1,31 @@
+.pontaBarraNeon {
+    width: 90vw;
+    height: 5px;
+    margin-top: -50px;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -350px;
+    width:100%;
+}
+
+.barraNeon {
+    background-color: #ff73ff;
+    box-shadow: 0px 0px 10px #ff00fd, 0px 0px 20px #ff00fd, 0px 0px 40px #ff00fd, 0px 0px 80px #ff00fd;
+    height: 5px;
+    width: 100%;
+}
+
+.barraNeonRosa {
+    background-color: #a5baff;
+    box-shadow: 0px 0px 10px #4A0FF6, 0px 0px 20px #4A0FF6, 0px 0px 40px #4A0FF6, 0px 0px 80px #0f5cf6;
+}
+
+.d-flex-top {
+    display: flex;
+    flex-direction: column;
+    margin-top: -120px;
+    width:100%;
+}

@@ -1,0 +1,1149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code', monospace;
+}
+
+.parte_principal {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    background-image: linear-gradient(90deg, #0d0a31, #0f0f11);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.fundo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.triangulo_contorno_pequeno {
+    z-index: 0;
+    width: 20%;
+    position: absolute;
+    left: 10%;
+    bottom: -10px;
+    overflow: hidden;
+}
+
+.triangulo_contorno {
+    z-index: 0;
+    width: 150%;
+    filter: opacity(0.2);
+    position: absolute;
+    left: -55%;
+    overflow: hidden;
+    right: 0px;
+}
+
+.triangulo_preenchimento {
+    height: 85%;
+    right: 10%;
+    opacity: 0.2;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.parte_principal::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    background-color: #4A0FF6;
+    filter: blur(160px);
+    border-radius: 100%;
+    bottom: -25%;
+    left: -25%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.parte_principal::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    background-color: #ff00fd;
+    filter: blur(10rem);
+    border-radius: 100%;
+    bottom: -30%;
+    right: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.logo_efeito_principal {
+    width: 60%;
+    overflow: hidden;
+}
+
+.area_logo_principal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.content_logo_virus {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area_virus_logo {
+    height: 100%;
+    display: flex;
+    align-items: start;
+}
+
+.virus_logo {
+    position: absolute;
+    height: 10%;
+    transform-style: preserve-3d;
+    opacity: 0;
+    animation: virusA 10s linear infinite;
+}
+
+@keyframes virusA {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    50% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    }
+}
+
+.area_seta_pixel {
+    display: flex;
+    justify-content: center;
+}
+
+.seta_pixel {
+    width: 5%;
+    position: relative;
+    transform: rotate(90deg);
+    animation: seta_pixelM 2s linear infinite;
+}
+
+@keyframes seta_pixelM {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.area_logos_senac {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    z-index: 8;
+}
+
+.logo_senac {
+    height: 25%;
+    position: relative;
+    z-index: 5;
+}
+
+.segunda_parte {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 600px;
+    background-image: linear-gradient(90deg, #0d0a31, #0f0f11);
+    z-index: 2;
+    overflow: hidden;
+    /* efeito "folhear" -  se ativado linkagem com o <a href> não funciona corretamente */
+    position: sticky;
+}
+
+.segunda_parte::after {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4A0FF6;
+    filter: blur(160px);
+    border-radius: 100%;
+    bottom: -75%;
+    right: -65%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.segunda_parte::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    background-color: #ff00fd;
+    filter: blur(160px);
+    border-radius: 100%;
+    top: -55%;
+    right: -65%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.icon_sobre {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+}
+
+.triangulo_fundop2 {
+    position: absolute;
+    bottom: 5px;
+    height: 50%;
+    left: 5%;
+    z-index: 0;
+}
+
+.logo_senacUp {
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    width: 20%;
+}
+
+.content_segunda_parte {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_cards_segunda_parte {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 25px;
+    align-items: center;
+}
+
+.cards_segunda_parte {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    transition: all 1s;
+    margin: 0;
+    padding: 25px;
+}
+
+@media (max-width:700px) {
+    .parte_principal {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+    }
+    .logo_efeito_principal {
+        width: 98%;
+        padding-left: 5%;
+    }
+    .area_logos_senac {
+        margin-bottom: 150px;
+    }
+    .cards_segunda_parte {
+        width: 90%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 30px;
+        flex-wrap: wrap;
+        bottom: 100px;
+        position: relative;
+    }
+}
+
+.card_segunda_parte {
+    width: 100px;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_segunda_parte .text-icons {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+}
+
+iframe {
+    width: 50px;
+    height: 50px;
+}
+
+.background_default {
+    height: 100vh;
+    display: flex;
+    min-height: 600px;
+    background-image: linear-gradient(90deg, #0d0a31, #0f0f11);
+    z-index: 2;
+    overflow: hidden;
+    /* efeito "folhear" -  se ativado linkagem com o <a href> não funciona corretamente */
+    position: sticky;
+    top: 0;
+}
+
+.modify_cards {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+}
+
+.background_default::after {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #4A0FF6;
+    filter: blur(160px);
+    border-radius: 100%;
+    bottom: -75%;
+    right: -65%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.background_default::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    background-color: #ff00fd;
+    filter: blur(160px);
+    border-radius: 100%;
+    top: -55%;
+    right: -65%;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+
+/* php!!  */
+
+.content_terceira_parte {
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+.about_terceira_parte {
+    height: 75%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.area_img_noticias_1evento {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.img_noticia_1evento {
+    position: absolute;
+    width: 45%;
+    z-index: 2;
+}
+
+.titulo_sobre {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content_about {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+    position: relative;
+    z-index: 5;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.pabout {
+    position: relative;
+    left: 35px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 160PX;
+    font-weight: bold;
+}
+
+.area_seta_rosa {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seta_rosa {
+    height: 50%;
+    position: relative;
+    top: 0px;
+    animation: seta_rosaA 5s linear infinite;
+}
+
+@keyframes seta_rosaA {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: -20px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.titulo strong {
+    color: white;
+    font-size: 350%;
+}
+
+.titulo {
+    display: flex;
+    gap: 2%;
+}
+
+.nomeTitulo {
+    width: 220px;
+}
+
+.pdiferente {
+    position: relative;
+    height: 94px;
+    top: 37%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    width: 160PX;
+    font-weight: bold;
+}
+
+.bloco_content_titulo_sobre {
+    width: 200px;
+    min-width: 200px;
+    height: 30px;
+    background-color: #ff00fd;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.bloco_content_titulo_sobre p {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.quadrados {
+    height: 100%;
+    width: 15px;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 15px;
+}
+
+.quadrado {
+    width: 50%;
+    height: 25%;
+}
+
+.q1 {
+    background-color: transparent;
+}
+
+.q2,
+.q3 {
+    background-color: #ff00fd;
+}
+
+.q4 {
+    background-color: transparent;
+}
+
+.qgeral {
+    height: 50%;
+    width: 100%;
+}
+
+.parte2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.titulo_parte1 {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: white;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.todo_card {
+    height: 400px;
+    width: 200px;
+    margin-right: 150px;
+    margin-top: 150px;
+    cursor: pointer;
+    display: flex;
+}
+
+.card {
+    height: 350px;
+    width: 250px;
+    position: relative;
+    z-index: 5;
+}
+
+.ftperfil {
+    position: absolute;
+    height: 100%;
+    filter: grayscale(1);
+    width: 100%;
+    transition: 0.2s linear;
+}
+
+.todo_card:hover .ftperfil {
+    filter: none;
+    transform: scale(1.1);
+}
+
+.quadrados .q2 {
+    position: relative;
+    top: 0;
+}
+
+.h1_q2 {
+    font-size: 25px;
+    width: 170px;
+    position: absolute;
+    top: -15px;
+    transition-delay: 3s;
+    color: white;
+    transition: 0.5s ease-in-out;
+    text-align: center;
+    z-index: 9;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+.todo_card:hover .qVagas {
+    transform: scale(1.1);
+    top: -338px;
+    left: -62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 252px;
+    transition: 0.15s linear;
+    height: 40px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.quadrados .qVagas {
+    background-color: #ff00fd;
+    opacity: 0.75;
+    overflow: hidden;
+    width: 8px;
+    height: 8px;
+    top: -0;
+    /* mudar isso aqui */
+    left: 242px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.q_quadrado {
+    width: 10%;
+    height: 50%;
+    background-color: #ff00fd;
+}
+
+.qq1,
+.qq2,
+.qq3,
+.qq4 {
+    opacity: 0;
+    transform: scale(5.5);
+    transition: 0.2s;
+    background-color: #ff00fd;
+    border: none;
+}
+
+.qq1 {
+    transition-delay: 0.3s;
+}
+
+.qq2 {
+    transition-delay: 0.6s;
+}
+
+.qq3 {
+    transition-delay: 0.9s;
+}
+
+.qq4 {
+    transition-delay: 1.1s;
+}
+
+
+/* .todo_card:hover .q2:nth-child(1) {
+    background-color: red;
+    position: relative;
+    top: -10px;
+    
+} */
+
+.todo_card:hover .qq1 {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #4A0FF6;
+}
+
+.todo_card:hover .qq2 {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #4A0FF6;
+}
+
+.todo_card:hover .qq3 {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #4A0FF6;
+}
+
+.todo_card:hover .qq4 {
+    opacity: 1;
+    transform: scale(1);
+    background-color: #4A0FF6;
+}
+
+.todo_card:hover .h1_q2 {
+    top: 5px;
+    animation: typewriter 0.5s steps(12), blink 200ms steps(13) infinite normal;
+}
+
+.bloco_bot {
+    width: 100%;
+    height: 50px;
+    background-color: #ff00fd;
+    position: relative;
+    z-index: 5;
+}
+
+.quadrados {
+    height: 35px;
+    width: 15px;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 15px;
+}
+
+.quadrado {
+    width: 50%;
+    height: 25%;
+}
+
+.q1 {
+    background-color: transparent;
+}
+
+.q2,
+.q3 {
+    background-color: #ff00fd;
+}
+
+.q4 {
+    background-color: transparent;
+}
+
+.qgeral {
+    height: 50%;
+    width: 100%;
+}
+
+.content_bloco_bot {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    right: 2px;
+    text-align: center;
+}
+
+.bot {
+    position: relative;
+    top: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.area_ftperfil {
+    width: 200px;
+    height: 400px;
+}
+
+.seta_pixel_card {
+    height: 40px;
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    left: 12px;
+    animation: seta_pixel_cardA 2.5s linear infinite;
+}
+
+@keyframes seta_pixel_cardA {
+    0% {
+        left: 12px;
+    }
+    50% {
+        left: 0px;
+    }
+    100% {
+        left: 12px;
+    }
+}
+
+.nome_card {
+    color: white;
+    position: relative;
+    /* left: 0; */
+    font-size: 18px;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+.sobre_card {
+    color: white;
+    position: relative;
+    /* left: 0; */
+    left: 25px;
+    text-transform: uppercase;
+    font-size: 25px;
+    width: 200px;
+}
+
+.container_bloco {
+    display: flex;
+    position: relative;
+    left: 85px;
+}
+
+.area_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.content_cards {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.area_logo_senac_midUp {
+    height: 350px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: 1s linear;
+}
+
+@media (max-width:700px) {
+    .area_logo_senac_midUp {
+        height: 150px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+    }
+    .content_cards {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.logo_senac_midUp {
+    height: 70%;
+    position: relative;
+    z-index: 5;
+}
+
+.triangulo_preenchido_palestrantes {
+    position: absolute;
+    width: 100%;
+    opacity: 0.3;
+    pointer-events: none;
+    right: -20%;
+    top: 0;
+}
+
+.triangulo_contorno_palestrantes {
+    position: absolute;
+    left: -95%;
+    top: -20%;
+    width: 200%;
+    opacity: 0.1;
+}
+
+.container_titulo_palestrantes {
+    width: 90%;
+    display: flex;
+}
+
+.content_titulo_palestrantes {
+    display: flex;
+    gap: 20px;
+}
+
+.area_titulo_palestrantes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area_titulo_palestrantes strong {
+    color: #ff00fd;
+    font-size: 50px;
+    transition: 1s all;
+}
+
+@media (max-width:500px) {
+    .area_titulo_palestrantes strong {
+        color: #ff00fd;
+        font-size: 30px;
+    }
+}
+
+
+/* elementos para a transição de pagina */
+
+#q1 {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    z-index: 9999999;
+}
+
+#q2 {
+    width: 60%;
+    height: 60%;
+    background-color: #ff00fd;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1.5s;
+    overflow: hidden;
+}
+
+#q3 {
+    width: 60%;
+    height: 60%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+    transition: 0.9s;
+    overflow: hidden;
+}
+
+.area {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.btn_transition {
+    border: none;
+    background-color: transparent;
+}
+
+i {
+    padding: 2px;
+    color: white;
+    padding: 10px;
+    border-radius: 0px 0px 10px 0px;
+    background-color: #0f0f11;
+    border: none;
+    outline: none;
+}
+
+
+/* .todo_card:hover .cobra2{
+
+    animation: cobraAnimation 10s infinite   ease-out alternate;
+    opacity: 1;
+
+} */
+
+.cobra {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    /* mudar!  */
+    opacity: 0;
+    transition: 1s;
+    left: -18px;
+    bottom: -48px;
+}
+
+
+/* esquerda embaixo - inicio
+left: -18px;
+bottom: -18px; */
+
+
+/* esquerda embaixo
+left: -18px;
+bottom: -48px; */
+
+
+/* esquerda emcima
+left: -18px;
+bottom: 368px; */
+
+
+/* direita em cima
+left: 288px;
+bottom: 368px; */
+
+
+/* direita em baixo
+left: 288px;
+bottom: -48px; */
+
+.todo_card:hover .cobra {
+    animation: cobraAnimation1 3s infinite linear alternate;
+    opacity: 1;
+}
+
+@keyframes cobraAnimation1 {
+    0% {
+        left: -18px;
+        bottom: -48px;
+    }
+    25% {
+        left: -18px;
+        bottom: 368px;
+    }
+    50% {
+        left: 288px;
+        bottom: 368px;
+    }
+    75% {
+        left: 288px;
+        bottom: -48px;
+    }
+    100% {
+        left: -18px;
+        bottom: -48px;
+    }
+}
+
+.cobra2 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    opacity: 0;
+    left: -8px;
+    bottom: -43px;
+}
+
+
+/* 
+esquerda baixo - inicio
+left: -8px;
+    bottom: -43px;  */
+
+
+/* esquerda em cima
+left: -8px;
+    bottom: 373px; */
+
+
+/* direita em cima
+left: 288px;
+    bottom: 373px;  */
+
+
+/* direita em baixo
+left: 293px;
+    bottom: -43px */
+
+.todo_card:hover .cobra2 {
+    animation: cobraAnimation2 3s infinite 0.06s linear;
+    opacity: 1;
+}
+
+@keyframes cobraAnimation2 {
+    0% {
+        left: -8px;
+        bottom: -43px;
+    }
+    25% {
+        left: -8px;
+        bottom: 368px;
+    }
+    50% {
+        left: 288px;
+        bottom: 368px;
+    }
+    75% {
+        left: 288px;
+        bottom: -33px
+    }
+    100% {
+        left: -8px;
+        bottom: -38px;
+    }
+}
+
+.cobra3 {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    opacity: 0;
+    left: -3px;
+    bottom: -43px;
+}
+
+.todo_card:hover .cobra3 {
+    animation: cobraAnimation3 3s infinite 0.11s linear;
+    opacity: 1;
+}
+
+@keyframes cobraAnimation3 {
+    0% {
+        left: -3px;
+        bottom: -43px;
+    }
+    25% {
+        left: -3px;
+        bottom: 368px;
+    }
+    50% {
+        left: 288px;
+        bottom: 368px;
+    }
+    75% {
+        left: 288px;
+        bottom: -33px
+    }
+    100% {
+        left: -3px;
+        bottom: -33px;
+    }
+}
+
+.cobra,
+.cobra2,
+.cobra3 {
+    background-color: #4A0FF6;
+}

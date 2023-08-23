@@ -1,0 +1,23 @@
+
+#logo{
+    width: 400px;
+}
+
+#enviar{
+    background-color: #650054;
+    transition: 0.5s;
+    color: white;
+
+}
+
+#enviar:hover{
+    background-color: purple;
+}
+
+#enviar, #cancelar{
+    width: 200px;
+}
+
+strong{
+    margin-left: 5px;
+}

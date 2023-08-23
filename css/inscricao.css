@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+fieldset {
+    border: 1px solid #ae00af;
+}
+
+.tela-inscricao {
+    background-color: #0d0a31;
+    color: aliceblue;
+    width: 100%;
+}
+
+.container-inscricao {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.container-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+}
+
+.forms-inscricao {
+    width: 100%;
+    padding: 3%;
+    background-color: #0d0a31;
+    margin: auto;
+    margin-top: 10%;
+}
+
+legend {
+    font-size: 20px;
+    text-align: center;
+    color: #ae00af;
+}
+
+.inputBox {
+    padding: 3%;
+    background-color: transparent;
+}
+
+.dados-palestra {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.titulo-palestra {
+    text-align: center;
+    padding: 15px;
+}
+
+.desc-plaestra {
+    display: flex;
+    text-align: justify;
+    padding: 15px;
+    justify-content: center;
+}
+
+.dadosFormulario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inputUser {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.6em;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+}
+
+.inputUser:focus {
+    outline: none;
+    border: none;
+    border-style: none;
+}
+
+.sexo {
+    padding: 2%;
+}
+
+#data_nascimento {
+    width: 42%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(7, 7, 7);
+    margin-top: 2%;
+}
+
+.dados-pessoais {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4%;
+    padding: 10px;
+    justify-content: center;
+}
+
+#submit {
+    position: relative;
+    padding: 1em 1.8em;
+    outline: none;
+    border: 1px solid #303030;
+    background: #ca7cee45;
+    color: #fafafa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#submit:hover {
+    box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+    transition-delay: 0.6s;
+}
+
+#submit span {
+    position: absolute;
+}
+
+#submit span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+}
+
+#submit:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+}
+
+#submit span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+}
+
+#submit:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+}
+
+#submit span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+}
+
+#submit:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+}
+
+#submit span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+}
+
+#submit:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+}
+
+#submit:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+}
+
+#submit:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+}
+
+#enviar {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color), 0 0 4em 1em var(--glow-spread-color), inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+#enviar::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+#enviar:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color), 0 0 4em 2em var(--glow-spread-color), inset 0 0 .75em .25em var(--glow-color);
+}
+
+#enviar:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color), 0 0 2.5em 2em var(--glow-spread-color), inset 0 0 .5em .25em var(--glow-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .container-inscricao {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .dadosFormulario {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .dados-palestra {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 30%;
+    }
+    .container-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4%;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    #submit #enviar {
+        width: 50px;
+        padding: 30px;
+    }
+}

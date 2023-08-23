@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    background-color: #ffffff10;
+}
+
+.logo {
+    width: 150px;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    z-index: 99;
+    height: 10%;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.2px);
+    -webkit-backdrop-filter: blur(5.2px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #FF00FD;
+}
+
+.nav-menu {
+    display: flex;
+    margin: auto 5rem auto 90rem;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.header .navbar .nav-menu .nav-item .nav-link {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FF00FD;
+    text-decoration: none;
+}
+
+.nav-link:hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-image: linear-gradient(to right, #650064, #f703f5);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    transition: background-position 0.3s ease;
+}
+
+.nav-link:hover::after {
+    background-position: bottom right;
+}
+
+.nav-logo {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: relative;
+        left: 100%;
+        margin-top: 18%;
+        flex-direction: column;
+        background-color: #0d0a31;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px #650064;
+        padding: 5px;
+        right: 0;
+        z-index: 50;
+    }
+    .nav-link {
+        color: #FF00FD;
+    }
+    .nav-menu.active {
+        left: 120px;
+    }
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
